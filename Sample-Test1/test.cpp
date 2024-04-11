@@ -32,7 +32,7 @@ TEST_F(BaseballFixture, InvalidArgumentTest) {
 //
 //}
 
-TEST(TestCaseName, TestName2) {
+TEST(TestCaseName, MatchedNumber) {
 	Baseball game;
 	game.question = "123";
 	game.guess("123");
