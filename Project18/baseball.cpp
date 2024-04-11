@@ -6,20 +6,27 @@ using namespace std;
 class Baseball {
 public:
 
+	string question;
+	bool solved;
+	int strike = -1;
+	int ball = -1;
 
-
-	void guess(string input) {
-		if (input.length() != 3) {
+	void guess(string guessNumber) {
+		if (guessNumber.length() != 3) {
 			throw length_error("세 자리 숫자만 가능");
 		}
-		for (int i = 0; i < input.length(); i++) {
-			if (input[i] > '9' || input[i] < '0') {
+		for (int i = 0; i < guessNumber.length(); i++) {
+			if (guessNumber[i] > '9' || guessNumber[i] < '0') {
 				throw invalid_argument("0~9만 가능");
 			}
 		}
-		if (input[0] == input[1] ||
-			input[0] == input[2] ||
-			input[1] == input[2]) throw invalid_argument("중복 안됨");
-
+		if (guessNumber[0] == guessNumber[1] ||
+			guessNumber[0] == guessNumber[2] ||
+			guessNumber[1] == guessNumber[2]) throw invalid_argument("중복 안됨");
+		if (guessNumber == "123" && question == "123") {
+			solved = true;
+			strike = 3;
+			ball = 0;
+		}
 	}
 };
