@@ -12,7 +12,7 @@ public:
 			FAIL();
 		}
 		catch (exception e) {
-
+			 
 		}
 	}
 };
@@ -22,15 +22,6 @@ TEST_F(BaseballFixture, InvalidArgumentTest) {
 	assertIllegalArgument("12s");
 	assertIllegalArgument("121");
 }
-
-//TEST_F(TestCaseName, TestName1) {
-//	Baseball game;
-//
-//	EXPECT_THROW(game.guess("12"), std::length_error);
-//	EXPECT_THROW(game.guess("12a"), std::invalid_argument);
-//	EXPECT_THROW(game.guess("121"), std::invalid_argument);
-//
-//}
 
 TEST(TestCaseName, MatchedNumber) {
 	Baseball game;
