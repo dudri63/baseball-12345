@@ -12,7 +12,7 @@ public:
 			FAIL();
 		}
 		catch (exception e) {
-			 
+			  
 		}
 	}
 };
